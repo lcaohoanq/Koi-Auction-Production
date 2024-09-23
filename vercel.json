@@ -4,7 +4,20 @@
     { "src": "dist/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/[^.]+", "dest": "/dist/index.html" },
     { "src": "/(.*)", "dest": "/dist/$1" }
+  ],
+  "alias": ["koiauction88.me"],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<host>.*)"
+        }
+      ],
+      "destination": "https://koiauction88.me/$1",
+      "statusCode": 301
+    }
   ]
 }
