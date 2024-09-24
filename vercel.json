@@ -6,7 +6,7 @@
   "routes": [
     { "src": "/(.*)", "dest": "/dist/$1" }
   ],
-  "alias": ["koiauction88.me"],
+  "alias": ["koiauction88.me", "fkoi88.me"],
   "redirects": [
     {
       "source": "/(.*)",
@@ -17,6 +17,17 @@
         }
       ],
       "destination": "https://koiauction88.me/$1",
+      "statusCode": 301
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<host>.*)"
+        }
+      ],
+      "destination": "https://fkoi88.me/$1",
       "statusCode": 301
     }
   ]
