@@ -13,21 +13,10 @@
       "has": [
         {
           "type": "host",
-          "value": "(?<host>.*)"
+          "value": "(?!koiauction88\\.me|fkoi88\\.me).*"
         }
       ],
       "destination": "https://koiauction88.me/$1",
-      "statusCode": 301
-    },
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "(?<host>.*)"
-        }
-      ],
-      "destination": "https://fkoi88.me/$1",
       "statusCode": 301
     }
   ]
