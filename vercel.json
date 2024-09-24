@@ -11,6 +11,17 @@
       "has": [
         {
           "type": "host",
+          "value": "fkoi88.me"
+        }
+      ],
+      "destination": "/$1",
+      "statusCode": 200
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "(?<host>.*)"
         }
       ],
