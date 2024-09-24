@@ -1,23 +1,21 @@
 {
+  "version": 2,
   "outputDirectory": "dist",
-  "builds": [
-    { "src": "dist/**", "use": "@vercel/static" }
-  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/dist/$1" }
   ],
+  "alias": ["koiauction88.me"],
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
-          "value": "(?!koiauction88\\.me|fkoi88\\.me).*"
+          "value": "(?<host>.*)"
         }
       ],
-      "destination": "https://koiauction88.me/:path*",
+      "destination": "https://koiauction88.me/$1",
       "statusCode": 301
     }
-  ],
-  "alias": ["koiauction88.me", "fkoi88.me"]
+  ]
 }
