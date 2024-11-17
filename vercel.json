@@ -2,7 +2,7 @@
   "version": 2,
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/dist/" }
+    { "source": "/(.*)", "destination": "/dist/index.html" }
   ],
   "alias": ["fkoi88.me", "koiauction88.me"]
 }
